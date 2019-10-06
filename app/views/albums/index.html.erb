@@ -1,0 +1,19 @@
+<div class="albums">
+  <div class="container-fluid">
+
+    <div class="row">
+      <% @albums.each do |album|%> 
+        <div class="col-md-4">
+          <%= link_to album_path(album) do %>
+            <%= image_tag album.image, :class => "img-container" %>
+          <% end %>
+          <div class="album-info">
+            <h2><%= album.title %></h2> 
+            <p><%= link_to "See Album", album_path(album) %></p>
+          </div>
+        </div>
+      <% end %> 
+    </div>
+
+  </div>
+</div>
