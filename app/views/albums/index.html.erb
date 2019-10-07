@@ -3,14 +3,13 @@
 
     <div class="row">
       <% @albums.each do |album|%> 
-        <div class="col-md-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 link">
           <%= link_to album_path(album) do %>
-            <%= image_tag album.image, :class => "img-container" %>
-          <% end %>
-          <div class="album-info">
             <h2><%= album.title %></h2> 
-            <p><%= link_to "See Album", album_path(album) %></p>
-          </div>
+            <%= image_tag album.image, :class => "img-container" %> 
+            <p>See Album</p>
+          <% end %>
+          
         </div>
       <% end %> 
     </div>

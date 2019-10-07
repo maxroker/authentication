@@ -12,19 +12,13 @@ html, body {
   width: 100%;
 }
 
-.container-fluid, .row {
-  width: 100%;
-
-}
-
 /* HEADER */
 
 .pull-right {
   position: inline;
   float: right;
-  margin: 20px 20px 0 0;
+  margin-top: 20px;
 }
-
 
 header li {
  display: inline;
@@ -32,9 +26,13 @@ header li {
 }
 
 header img {
-  margin: 0 20px 0 0;
   height: 80px;
   width: 80px;
+}
+
+header img:hover {
+  margin-left: 3px;
+  transition: 0.2s;
 }
 
 header a {
@@ -45,54 +43,41 @@ header a {
 }
 
 header a:hover {
-  color: white;
+  color: #cce39d;
   text-decoration: none;   
 }
 
+
 /* ALBUMS */
 
-.album-info {
-  padding: 12px 24px 24px;
-}
-
-.album-info h2 {
-  font-size: 18px;
+.albums h2 {
+  font-size: 20px;
   text-transform: uppercase;
   color: white;
   font-weight: bold;
   margin: 0;
+  padding: 20px 0 10px 0;
 }
 
-.album-info p {
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.photos a, .albums a {
+.albums p {
   color: YellowGreen;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.albums a {
   text-decoration: none; 
 }
 
-.photos a:hover, .albums a:hover {
-  color: yellow;
-  text-decoration: none;
-}
-
-.img-container {
-  height: 300px;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-}
-
-.photo {
-  margin: 0 0 80px;   
-}
-.photo img {
+.img-container, .photo img  {
   width: 100%;
 }
 
+.albums h2:hover ~ p, 
+.link .img-container:hover ~ p {
+  color: #cce39d;
+}
 
 
 
@@ -113,13 +98,11 @@ header a:hover {
 
 .photo-info {
   padding: 12px 24px 24px;
+  margin: 0;
   color: #fff;
   opacity: 0.7;
 }
 
-.photo-info p {
-  margin: 0;
-}
 
 /* FORM PAGES */
 
@@ -165,44 +148,20 @@ input[type=password] {
 }
   
 /*  RESPONSIVE */
-
-@media screen and (max-width: 992px) {
-  .img-container img {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 512px) {
-  .pull-right {
-    background-color: #f1f2f2;
-    position: relative;
-    margin: 0;
-    width: 100%;
-  }
-
-  .pull-right ul {
-    margin: 0;
-    -webkit-margin-after: 0;
-    -webkit-margin-before: 0;
-    -webkit-padding-start: 0;
-  }
-
-  .pull-right ul li {
+@media screen and (max-width: 600px) {
+  
+  header .full {
     display: block;
-    float: left;
     margin: 0;
-    padding: 20px 0;
-    text-align: center;
-    width: 50%;
+    min-width: 100%;
   }
 
-  .pull-right ul li a {
-    display: block;
-    width: 100%;
+  .col-2 {
+    min-width: 80px;
+    margin-right: 20px;
   }
-
-  .img-container {
-    height: 200px;
+  .col-10 {
+    max-width: 75%;
   }
 }
 
